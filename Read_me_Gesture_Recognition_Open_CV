@@ -1,0 +1,27 @@
+# Hand Gesture Recognition using OpenCV
+
+A real-time computer vision application that detects and counts fingers using skin-color segmentation and convexity defects. This project captures video from a webcam, processes the frames in an HSV color space, and identifies the gesture based on the geometry of the hand.
+
+## 🚀 Features
+* **Real-time Detection:** Processes video frames instantly from your webcam.
+* **Skin Segmentation:** Uses HSV masking to isolate the hand from the background.
+* **Geometric Analysis:** Utilizes Convex Hull and Convexity Defects to identify finger counts.
+* **Visual Feedback:** Overlays the detected gesture name and geometric contours on the live feed.
+
+## 🛠️ Tech Stack
+* **Python 3.11+**
+* **OpenCV:** For image processing and computer vision.
+* **NumPy:** For numerical operations and array manipulation.
+
+## 📸 How it Works
+1. **Region of Interest (ROI):** The script focuses on a specific square on the screen to improve performance.
+2. **Filtering:** Applies Gaussian Blur and Dilation to reduce noise in the skin mask.
+3. **Contour Mapping:** Finds the largest contour (the hand) and draws a convex hull around it.
+4. **Defect Calculation:** Measures the "valleys" between fingers. The number of defects correlates to the number of fingers extended.
+
+## ⚙️ Installation & Usage
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/your-username/gesture-recognition-opencv.git](https://github.com/your-username/gesture-recognition-opencv.git)
+   cd gesture-recognition-opencv
